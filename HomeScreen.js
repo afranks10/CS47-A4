@@ -74,7 +74,7 @@ const AuthButton = ({ authFunction }) => {
 };
 
 function HomeScreen ({ navigation }) {
-  const {token, tracks, getSpotifyAuth} = useSpotifyAuth();
+  const {token, tracks, getSpotifyAuth} = useSpotifyAuth(true);
   let contentDisplayed;
   if (token) {
     contentDisplayed = <UserList tracks = {tracks}></UserList>;
